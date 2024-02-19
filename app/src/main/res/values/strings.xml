@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyKnajpa</string>
+    <string name="nav_drawer_menu" translatable="false">Navigation drawer menu</string>
+    <string name="bottom_nav_cook">Cook</string>
+    <string name="bottom_nav_mid">Mid</string>
+    <string name="bottom_nav_front">Front</string>
+    <string name="office_icon_description">Navigation drawer office</string>
+</resources>
