@@ -1,7 +1,6 @@
 package uk.ac.aber.myknajpa.ui.theme
 
 
-
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
@@ -13,9 +12,9 @@ import androidx.compose.ui.unit.isUnspecified
 
 @Composable
 fun AutoResizedText(
+    modifier: Modifier = Modifier,
     text: String,
     style: TextStyle = MaterialTheme.typography.bodyLarge,
-    modifier: Modifier = Modifier,
     color: Color = style.color
 ) {
     var resizedTextStyle by remember {

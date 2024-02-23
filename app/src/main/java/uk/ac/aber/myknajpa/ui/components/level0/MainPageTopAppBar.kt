@@ -12,7 +12,7 @@ import uk.ac.aber.myknajpa.ui.theme.MyKnajpaTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainPageTopAppBar(
+fun TopAppBar(
     onClickMenu: () -> Unit = {},
     onClickOffice: () -> Unit = {}
 ){
@@ -41,6 +41,6 @@ fun MainPageTopAppBar(
 @Composable
 private fun MainPageTopAppBarPreview() {
     MyKnajpaTheme(dynamicColor = false) {
-        MainPageTopAppBar()
+        TopAppBar()
     }
 }

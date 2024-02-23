@@ -23,33 +23,33 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import uk.ac.aber.myknajpa.R
 import uk.ac.aber.myknajpa.model.IconGroup
-import uk.ac.aber.myknajpa.ui.navigation.Screen
+import uk.ac.aber.myknajpa.ui.navigation.Navig
 import uk.ac.aber.myknajpa.ui.navigation.screens
 import uk.ac.aber.myknajpa.ui.theme.MyKnajpaTheme
 
 @Composable
-fun MainPageNavigationBar(
+fun NavigationBar(
     navController: NavController,
 ) {
     val icons = mapOf(
 
-        Screen.Orders to IconGroup(
+        Navig.Orders to IconGroup(
             filledIcon = Icons.Filled.List,
             outlineIcon = Icons.Outlined.List,
             label = stringResource(id = R.string.bottom_nav_cook)
         ),
 
-        Screen.Cook to IconGroup(
+        Navig.Cook to IconGroup(
             filledIcon = Icons.Filled.OutdoorGrill,
             outlineIcon = Icons.Outlined.OutdoorGrill,
             label = stringResource(id = R.string.bottom_nav_cook)
         ),
-        Screen.Mid to IconGroup(
+        Navig.Mid to IconGroup(
             filledIcon = Icons.Filled.Receipt,
             outlineIcon = Icons.Outlined.Receipt,
             label = stringResource(id = R.string.bottom_nav_mid)
         ),
-        Screen.Front to IconGroup(
+        Navig.Front to IconGroup(
             filledIcon = Icons.Filled.Receipt,
             outlineIcon = Icons.Outlined.Receipt,
             label = stringResource(id = R.string.bottom_nav_front)
@@ -93,6 +93,6 @@ fun MainPageNavigationBar(
 private fun MainPageNavigationBarPreview() {
     val navController = rememberNavController()
     MyKnajpaTheme(dynamicColor = false) {
-        MainPageNavigationBar(navController)
+        NavigationBar(navController)
     }
 }

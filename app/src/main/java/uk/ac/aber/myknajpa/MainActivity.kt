@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -15,15 +14,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import uk.ac.aber.myknajpa.model.ProductionViewModel
-import uk.ac.aber.myknajpa.ui.navigation.Screen
+import uk.ac.aber.myknajpa.ui.navigation.Navig
 import uk.ac.aber.myknajpa.ui.screens.cook.CookScreen
-import uk.ac.aber.myknajpa.ui.screens.orders.OrdersScreen
+import uk.ac.aber.myknajpa.ui.screens.orders.OrderScreen
 import uk.ac.aber.myknajpa.ui.theme.MyKnajpaTheme
 
 class MainActivity : AppCompatActivity() {
 
-
-//    private val productionViewModel = ProductionViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -51,13 +48,13 @@ private fun BuildNavigationGraph(
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = Screen.Cook.route
+        startDestination = Navig.Cook.route
     ) {
-        composable(Screen.Orders.route) { OrdersScreen(navController) }
-        composable(Screen.Cook.route) {
+        composable(Navig.Orders.route) { OrderScreen(navController) }
+        composable(Navig.Cook.route) {
             CookScreen(navController, productionViewModel, "cook") }
-        composable(Screen.Mid.route) { CookScreen(navController, productionViewModel, "mid") }
-        composable(Screen.Front.route) { CookScreen(navController, productionViewModel, "front") }
+        composable(Navig.Mid.route) { CookScreen(navController, productionViewModel, "mid") }
+        composable(Navig.Front.route) { CookScreen(navController, productionViewModel, "front") }
 
     }
 }

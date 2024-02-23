@@ -33,4 +33,24 @@ class ProductionViewModel: ViewModel() {
 //        addedCall.add(callItem)
 //    }
 
-
+//mvvm
+//        plik class Products - zaslepka
+//
+//        model
+//        lista z orderami (czas powstania(data class), czas zrealizowania(), zawartosc)
+//        listv calls
+//
+//        class Call(czas, product, ilosc, status)
+//
+//        enum status (cooking, ready, yellow, red) wasted-> callHistory[]
+//
+//        stale dane - np cooking time, name, koszt, cena, typ
+//        zmienne dane - total, waste, sold
+//
+//        callCook [call1, call2, call3]
+//        callMid [call1, call2, call3]
+//        callFront [call1, call2, call3]
+//
+//        class Money (stan konta)
+//
+//        class GameTime (multplier, czas gry, day )
