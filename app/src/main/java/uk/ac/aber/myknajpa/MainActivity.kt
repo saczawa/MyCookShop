@@ -15,7 +15,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import uk.ac.aber.myknajpa.model.ProductionViewModel
 import uk.ac.aber.myknajpa.ui.navigation.Navig
-import uk.ac.aber.myknajpa.ui.screens.cook.CookScreen
+import uk.ac.aber.myknajpa.ui.screens.cook.ProductionScreen
 import uk.ac.aber.myknajpa.ui.screens.orders.OrderScreen
 import uk.ac.aber.myknajpa.ui.theme.MyKnajpaTheme
 
@@ -52,9 +52,9 @@ private fun BuildNavigationGraph(
     ) {
         composable(Navig.Orders.route) { OrderScreen(navController) }
         composable(Navig.Cook.route) {
-            CookScreen(navController, productionViewModel, "cook") }
-        composable(Navig.Mid.route) { CookScreen(navController, productionViewModel, "mid") }
-        composable(Navig.Front.route) { CookScreen(navController, productionViewModel, "front") }
+            ProductionScreen(navController, productionViewModel, "cook") }
+        composable(Navig.Mid.route) { ProductionScreen(navController, productionViewModel, "mid") }
+        composable(Navig.Front.route) { ProductionScreen(navController, productionViewModel, "front") }
 
     }
 }

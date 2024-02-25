@@ -49,7 +49,6 @@ fun CircleItemTopBar(product : Product) {
                 modifier = Modifier
                     .fillMaxSize()
                     .wrapContentSize(Alignment.Center)
-
             )
         }
         Text(

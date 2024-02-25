@@ -1,11 +1,9 @@
 package uk.ac.aber.myknajpa.ui.components
 
-import android.widget.Space
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Close
@@ -22,7 +20,7 @@ import uk.ac.aber.myknajpa.model.TopBorderShape
 
 
 @Composable
-fun ScrollableListWithCircles() {
+fun WasteBoard() {
     var isExpanded by remember { mutableStateOf(false) }
 
     Column(

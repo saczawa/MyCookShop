@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import uk.ac.aber.myknajpa.HardcodedData.OrderList
-import uk.ac.aber.myknajpa.ui.components.ScrollableListWithCircles
+import uk.ac.aber.myknajpa.ui.components.WasteBoard
 import uk.ac.aber.myknajpa.ui.components.TopLevelScaffold
 import uk.ac.aber.myknajpa.ui.components.level1.OrderScrollableColumn
 
@@ -36,7 +36,7 @@ fun OrderScreen(
                     .fillMaxSize()
                     .padding(7.dp)
             ) {
-                ScrollableListWithCircles()
+                WasteBoard()
                 OrderScrollableColumn(OrderList.orders, 1)
             }
 
